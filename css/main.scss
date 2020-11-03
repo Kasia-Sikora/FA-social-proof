@@ -3,7 +3,8 @@ $softPink: hsl(333, 80%, 67%);
 $darkGrayishMagenta: hsl(303, 10%, 53%);
 $lightGrayishMagenta: hsl(300, 24%, 96%);
 $white: hsl(0, 0%, 100%);
-$borderRadius: 20px;
+$borderRadius: 1vh;
+$margin: 0%;
 
 
 :root {
@@ -58,7 +59,7 @@ section {
   & .stars {
     display: block;
     width: 400px;
-    height: 50px;
+    //height: 50px;
   }
 
   & span {
@@ -110,6 +111,103 @@ section {
     line-height: 1.7;
   }
 
+}
+
+@media only screen and (min-width: 1160px){
+
+  section {
+    float: left;
+    margin: unset;
+  }
+
+  .review,
+  .report-guru,
+  .best-tech {
+
+    align-items: center;
+    justify-content: start;
+    padding: 2%;
+    margin: 0 0 3% 0;
+    max-width: 450px;
+
+    span {
+      font-size: inherit;
+      margin-top: unset;
+    }
+
+    .stars {
+      width: 150px;
+      margin-right: 5%;
+
+      img{
+        width: 20px;
+      }
+    }
+
+  }
+
+  .container {
+    margin: 10% auto;
+    width: 77%;
+  }
+
+
+  .rating{
+    float: right;
+  }
+
+  .header {
+    width: 38%;
+  }
+
+  .rating {
+    width: 60%;
+  }
+
+  .header {
+    text-align: left;
+
+    h1 {
+      font-size: 3.5rem;
+    }
+
+    p {
+      margin: revert;
+      font-size: 1rem;
+    }
+  }
+
+  @for $i from 1 through 3 {
+    $margin: $margin + 10%;
+    .rating > div:nth-child(#{$i}){
+        margin-left: $margin;
+    }
+  }
+
+  section:last-of-type {
+    display: flex;
+    justify-content: space-between;
+
+
+    .card {
+      width: 26%;
+      margin: unset;
+      font-size: 1rem;
+      padding: 3%;
+      max-height: 200px;
+
+      img {
+        width: 50px;
+      }
+    }
+
+    @for $i from 1 through 3 {
+      $margin: $margin + 2%;
+      .card:nth-of-type(#{$i}){
+        margin-top: $margin;
+      }
+    }
+  }
 }
 
 
