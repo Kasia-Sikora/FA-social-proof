@@ -1,5 +1,12 @@
 # Frontend Mentor - Social proof section
 
+
+My solution: 
+
+<img src="https://raw.githubusercontent.com/Kasia-Sikora/FA-social-proof/main/assets/Screenshot.png" width="50%" height="50%">
+
+Original:
+
 ![Design preview for the Social proof section coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
